@@ -9,7 +9,7 @@ import {
 } from "../feature/textSelectedSlice";
 
 const PDFViewer = ({ pdfUrl }) => {
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber] = useState(1);
   const [pdf, setPdf] = useState(null);
   const [textContent, setTextContent] = useState("");
 
@@ -47,7 +47,7 @@ const PDFViewer = ({ pdfUrl }) => {
     };
 
     loadPdf();
-  }, [pdfUrl, pageNumber]);
+  }, [pdfUrl, pageNumber, dispatch]);
 
   return (
     <div>

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useCallback, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { saveAs } from "file-saver";
 
 const TextExtractor = () => {
   // const textSelections = useSelector((state) => state.pdf.textSelections);
-  const dispatch = useDispatch();
 
   const texteComplet = useSelector(
     (state) => state.textSelectedStore.texteComplet
@@ -33,8 +32,10 @@ const TextExtractor = () => {
       if (matchRef) {
         // Le texte extrait est dans match[1]
         setCityaRef(matchRef[1]);
+        console.log(matchRef[1]);
       } else {
         setCityaRef("Aucune correspondance trouvée");
+        console.log(matchRef);
       }
       // LOCATAIRE
       const regexCitLoc = /Locataire : (.*?) Objet :/;
@@ -109,11 +110,11 @@ const TextExtractor = () => {
       } else {
         setOraliaAd("Aucune correspondance trouvée");
       }
-    } else {
+    } else if (pdfType === "Autre") {
       console.log("Autre");
+      console.log(texteComplet);
     }
   };
-
   const handleFileText = () => {
     // Sauvegarder dans un fichier .txt les zones sélectionnées
     if (pdfType === "Citya") {

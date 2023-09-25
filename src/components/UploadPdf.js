@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPdfFile } from "../feature/textSelectedSlice";
 import { setPdfName } from "../feature/textSelectedSlice";
-import { setMessageInfo } from "../feature/messageInfoSlice";
 
 const UploadPdf = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const dispatch = useDispatch();
-  const pdfFile = useSelector((state) => state.textSelectedStore.pdfFile);
+
   const pdfName = useSelector((state) => state.textSelectedStore.pdfName);
 
   // Stocke le fichier sélectionné dans le store

@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import TextExtractor from "../components/TextExtractor";
 import UploadPdf from "../components/UploadPdf";
 import PDFViewer from "../components/PDFViewer";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  setPdfFile,
-  setPdfName,
   clearPdfFile,
   clearPdfName,
+  clearPdfType,
 } from "../feature/textSelectedSlice";
 import { clearMessageInfo } from "../feature/messageInfoSlice";
 
@@ -24,23 +22,27 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const handleHome = () => {
+    console.log("handleHome");
     setClickHome(true);
   };
 
   useEffect(() => {
     // Défilement vers le haut de la page au chargement
     window.scrollTo(0, 0);
+    setClickHome(false);
   }, []);
 
   useEffect(() => {
     setMessageInfo(messageInfoFromStore);
+    setClickHome(false);
   }, [messageInfoFromStore]);
 
   useEffect(() => {
     dispatch(clearPdfFile());
+    dispatch(clearPdfType());
     dispatch(clearPdfName());
     dispatch(clearMessageInfo());
-  }, [clickHome]);
+  }, [clickHome, dispatch]);
 
   let content = (
     <div className="home">
