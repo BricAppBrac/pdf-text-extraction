@@ -20,22 +20,10 @@ const UploadPdf = () => {
     dispatch(setPdfName(file.name));
   };
 
-  // Appelle le téléchargement du fichier
-  // const handleUpload = () => {
-  //   console.log("fichier à télécharger");
-  //   if (selectedFile) {
-  //     onFileUpload(selectedFile);
-  //     // Réinitialise le champ de sélection de fichier
-  //     setSelectedFile(null);
-  //   } else {
-  //     alert("Veuillez sélectionner un fichier PDF.");
-  //   }
-  // };
-
   return (
     <div className="upload-content">
       <h3>**********************************</h3>
-      <h3>FICHIER CHOISI</h3>
+      <h3>SELECTION DU FICHIER</h3>
       <h3>**********************************</h3>
       {pdfName ? (
         pdfName

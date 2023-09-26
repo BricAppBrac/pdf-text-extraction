@@ -164,7 +164,11 @@ const TextExtractor = () => {
   }
 
   return (
-    <div>
+    <div className="extract-content">
+      <div className="extract-click">
+        <i class="fa-regular fa-hand-point-right"></i>
+        <button onClick={handleFileText}>Création fichier .txt</button>
+      </div>
       <h3>Zones à extraire:</h3>
       <h4>Référence</h4>
       <h5>{cityaRef ? cityaRef : oraliaRef ? oraliaRef : "non extrait"}</h5>
@@ -176,8 +180,6 @@ const TextExtractor = () => {
       <h5>{cityaBat ? cityaBat : oraliaBat ? oraliaBat : "non extrait"}</h5>
       <h4>*** Adresse:</h4>
       <h5>{cityaAd ? cityaAd : oraliaAd ? oraliaAd : "non extrait"}</h5>
-
-      <button onClick={handleFileText}>Création fichier .txt</button>
     </div>
   );
 };

@@ -53,8 +53,10 @@ const Home = () => {
         </button>
       </div>
       <div className="home-content">
-        <p>{messageInfo}</p>
         <UploadPdf />
+        <p>
+          <i class="fa-regular fa-hand-point-right"></i> {messageInfo}
+        </p>
         {pdfFile ? <PDFViewer pdfUrl={pdfFile} /> : null}
         {pdfFile ? <TextExtractor /> : null}
       </div>

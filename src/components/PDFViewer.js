@@ -18,9 +18,7 @@ const PDFViewer = ({ pdfUrl }) => {
   const handleTypeFichier = (typeSelected) => {
     dispatch(setPdfType(typeSelected));
     dispatch(
-      setMessageInfo(
-        "Vous pouvez extraire les zones Ref / Loc / Lieu puis générer un fichier .txt"
-      )
+      setMessageInfo("Cliquer sur le bouton pour générer un fichier .txt")
     );
   };
 
@@ -64,13 +62,13 @@ const PDFViewer = ({ pdfUrl }) => {
           }}
         >
           {" "}
-          <option value="">Type Fichier</option>
+          <option value="">Sélectionner type</option>
           <option value="Citya">Citya</option>
           <option value="Oralia">Oralia</option>
           <option value="Autre">Autre</option>
         </select>
       </div>
-      <h4>Texte brut complet:</h4>
+      <h3>Texte brut complet:</h3>
       <h5>{textContent}</h5>
       {/* <button onClick={() => setPageNumber(pageNumber - 1)}>
         Page précédente
