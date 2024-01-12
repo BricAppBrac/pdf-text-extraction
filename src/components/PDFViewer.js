@@ -63,7 +63,7 @@ const PDFViewer = ({ pdfUrl }) => {
         >
           {" "}
           <option value="">Sélectionner type</option>
-          <option value="Citya">Citya</option>
+          <option value="Citya">Citya / Targe / Collab</option>
           <option value="Oralia">Oralia</option>
           <option value="Autre">Autre</option>
         </select>

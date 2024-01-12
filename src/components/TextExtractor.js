@@ -166,7 +166,7 @@ const TextExtractor = () => {
   return (
     <div className="extract-content">
       <div className="extract-click">
-        <i class="fa-regular fa-hand-point-right"></i>
+        <i className="fa-regular fa-hand-point-right"></i>
         <button onClick={handleFileText}>Création fichier .txt</button>
       </div>
       <h3>Zones à extraire:</h3>

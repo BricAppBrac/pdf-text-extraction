@@ -137,17 +137,21 @@ body h3 {
   font-size: 1.2rem;
   padding: 5px;
   border-radius: 20px;
-  background: rgb(37, 21, 11);
+  background: rgb(168, 10, 29);
   color: wheat;
   margin: 0 10px;
 }
 .home .home-content select {
   font-size: 1.2rem;
+  height: 50px;
+  border: 5px solid rgb(136, 184, 96);
+  padding: 5px;
+  margin: 5px;
 }
 .home .home-content p {
   font-size: 1.4rem;
-  color: rgb(214, 86, 48);
-  background: rgb(136, 184, 96);
+  color: rgb(168, 10, 29);
+  background: rgba(187, 176, 159, 0.644);
   padding: 5px;
   margin: 15px auto;
   text-align: center;
@@ -156,6 +160,22 @@ body h3 {
   padding-left: 5px;
   color: rgb(4, 26, 85);
   font-size: 1.1rem;
+}
+.home .home-content .extract-content {
+  margin: 10px auto;
+}
+.home .home-content .extract-content extract-click {
+  display: flex;
+}
+.home .home-content .extract-content extract-click i {
+  height: 50px;
+  color: rgb(168, 10, 29);
+}
+.home .home-content .extract-content extract-click i:hover {
+  cursor: pointer;
+}
+.home .home-content .extract-content extract-click button {
+  margin: 5px auto;
 }
 
 .uploadpdf .upload-content .upload-file {

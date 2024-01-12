@@ -55,7 +55,7 @@ const Home = () => {
       <div className="home-content">
         <UploadPdf />
         <p>
-          <i class="fa-regular fa-hand-point-right"></i> {messageInfo}
+          <i className="fa-regular fa-hand-point-right"></i> {messageInfo}
         </p>
         {pdfFile ? <PDFViewer pdfUrl={pdfFile} /> : null}
         {pdfFile ? <TextExtractor /> : null}
